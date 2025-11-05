@@ -3,8 +3,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Rancho", cursive;
-    /* font-family: "Alice", serif; */
+      /* font-family: "Lora", serif; */
+    /* font-family: "Rancho", cursive; */
+    font-family: "Alice", serif;
 }
 html, body{
   height: 100%;
@@ -13,7 +14,18 @@ html, body{
 .main-container {
   height: 100vh;
   background-color: black;
-  
+  isolation: isolate;
+  position: relative;
+}
+.main-container::before{
+  content: "";
+  bottom: 0;
+  position: absolute;
+  height: 35vh;
+  width: 100%;
+  z-index: -1;
+  background-color: black ;
+  filter: blur(10px);
 }
 .blur {
   position: absolute;
@@ -24,24 +36,20 @@ html, body{
   filter: blur(100px);
   height: 30vh;
   width: 30vh;
-  z-index: 1;
+  z-index: -2;
 }
 .container{
   max-width: 1300px;
   margin: auto;
   height: 100vh;
+  padding: 0 2rem;
   /* background-color: green; */
 }
 .navbar{
   height: 14vh;
   /* background-color: red; */
 }
-.hero-section{
-  height: calc(100vh - 14vh);
-  display: flex;
-  /* background-color: yellow; */
-  /* max-width: 1300px; */
-}
+
 .navbar{
   display: flex;
   justify-content: space-between;
@@ -54,11 +62,11 @@ html, body{
 }
 .nav-list{
   display: flex;
-  gap:4rem;
+  gap:3rem;
  
 }
 .nav-links{
-  font-size: 2.3rem;
+  font-size: 1.6rem;
   color: white;
  
 }
@@ -77,25 +85,47 @@ li {
 a{
 text-decoration: none;
 }
+.hero-section{
+  height: calc(100vh - 14vh);
+  display: flex;
+  
+}
 .left-container {
   /* background-color: aqua; */
+  align-self: center;
   flex: 1;
+}
+.left-container h1{
+  font-size: 4.1rem;
+  color: white;
+  
 }
 .middle-container{
   /* background-color: #ef0909; */
   
 }
 .middle-container img{
-  height: 90vh;
-  display: inline-block;
+  height: 82vh;
+  padding-top: 2rem;
+  /* display: inline-block; */
   margin: auto;
-  z-index: 999999;
+  /* background-color: red; */
 }
 .right-container{
   /* background-color: blueviolet; */
+  align-self: end;
+  margin-bottom: 8rem;
   flex: 1;
 }
-
+.right-container p{
+  font-size: 1.3rem;
+  color: white;
+}
+[data-type="border-para"]{
+  border-right: .5rem solid white;
+  text-align: end;
+  padding-right: 2rem ;
+}
 
 
 header {
