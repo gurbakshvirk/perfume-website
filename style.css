@@ -16,7 +16,6 @@ html, body{
 }
 .bg-light-black{
   background-color: #101010;
-
 }
 .main-container {
   /* height: 100vh; */
@@ -330,9 +329,7 @@ header {
 
 
 /* our services  */
-.c1{
-  /* padding: 2rem; */
-}
+
 .grid-services{
   /* background-color: rgb(228, 16, 16); */
   display: grid;
@@ -342,21 +339,41 @@ header {
   grid-template-columns: repeat(3, 1fr);
 }
 .services{
- border-top: 5px solid #e2f2b0;
+ position: relative;
+ isolation: isolate;
 }
-.services :hover{
- background-color:  #f3e011;
-}
-
+/* .services:hover{
+ background-color:  #e2f2b0;
+  transition: 0.8s all;
+} */
 .services h4{
-  padding: 1.5rem 0;
+  padding: 1.5rem 0 1rem 0;
   font-size: 2rem;
   color: white;
 }
-
+.services h4:hover{
+   color: black;
+}
 .services p{
   font-size: 1rem;
   color: white;
-  /* padding: 1.2rem 0; */
-  margin: 0.8rem;
+  padding: 0.8rem 0.8rem 2rem 0.8rem;
+}
+.services::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.3rem;
+  top: 0;
+  left: 0;
+  background-color: #e2f2b0;
+  z-index: -1;
+  transition: 0.3s all;
+}
+.services:hover::before{
+  height: 100%;
+}
+.services:hover.services *{
+  color: black;
+  font-weight: 590;
 }
