@@ -344,14 +344,16 @@ header {
 .services{
  border-top: 5px solid #e2f2b0;
 }
-/* .grid-services :hover{
- border: 5px solid #354503;
-} */
+.services :hover{
+ background-color:  #f3e011;
+}
+
 .services h4{
   padding: 1.5rem 0;
   font-size: 2rem;
   color: white;
 }
+
 .services p{
   font-size: 1rem;
   color: white;
