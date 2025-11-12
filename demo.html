@@ -1,0 +1,100 @@
+@media screen and (max-width:580px) {
+  *{
+    /* overflow: hidden; */
+    /* background-color: aqua; */
+  }
+  .nav-list{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    inset: 0;
+    position: absolute;
+    font-size: 2.2rem;
+    gap: 1.5rem;
+    background-color: black; 
+    transform: translateX(-100%);
+  }
+  .logo{
+    z-index: 5;
+  }
+  .nav-list :hover{
+    font-size: 2.4rem;
+    transition: all 0.7s;
+  }
+  .hamburger{
+    display: block;
+    cursor: pointer;
+    z-index: 5;
+  }
+  .hero-section{
+    flex-direction: column;
+  }
+  .left-container h1{
+    font-size: 1.9rem;
+    padding-top: 3rem;
+  }
+  .right-container{
+    display: none;
+    position: absolute;
+    top:20rem;
+    left: 0;
+  }
+  .right-container p{
+    font-size: 0.8rem;
+  }
+  /* .middle-container{
+    position: absolute;
+    height: 20rem; */
+    /* background-color: red; */
+    
+   .middle-container img{
+     position: absolute;
+    height: 25rem;
+    display: block;
+    /* inset: 0; */
+    top: 5rem;
+    left: 4rem;
+    /* right: 0.5rem; */
+    margin-top: 8rem;
+    /* background-color: red; */
+   }
+   .main-container{
+    /* height: 88vh; */
+    background-color: red;
+   }
+   /* .main-container::before{
+  content: "";
+  bottom: 25vh;
+  position: absolute;
+  height: 18vh;
+  width: 100%;
+  z-index: -1;
+  background-color: black ;
+  filter: blur(10px);
+} */
+  .scroll  {
+  background-color: black;
+  position: absolute;
+  overflow: hidden;
+  top: 38rem;
+  height: 5rem;
+}
+
+.content {
+  display: flex;
+  white-space: nowrap;
+}
+
+.inner {
+  display: flex;
+  animation: scroll 15s linear infinite alternate;
+}
+.inner h1{
+  /* font-size: 3rem; */
+}
+
+  .sale-product img{
+    height: 300px;
+    width: 500px;
+  }
+}
